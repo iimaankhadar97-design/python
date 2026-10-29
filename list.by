@@ -1,0 +1,58 @@
+def todolist():
+    hawl = []
+    
+    while True:
+        print("\n waa program kaa caawinata inaad waxqabadkaaga ku qorto")
+        print("1. Hawl Ku dar")
+        print("2. Hawlaha eeg")
+        print("3. ka saar")
+        print("4. ka bax")
+        
+        choice = input("dooro 1 ilaa 4: ")
+        
+        if choice == "1":
+            hawl = input("Maxaad qabanaysaa ")
+            hawl.append(hawl)
+            print(f"waa lagu daray: {hawl}")
+            
+        elif choice == "2":
+            if not hawl:
+                print("Waxbaqada ma jiro")
+            else:
+                print("\n waxaqabad yadaadu waa: ")
+                '''
+                for i, task in enumerate(hawl, 1):
+                    print(f"{i}. {task}")
+                '''
+                for i in hawl:
+                    print(i)    
+        elif choice == "3":
+            if not hawl:
+                print("waa madhan ")
+            else:
+                print("\n shaqada kuu taalla waa:")
+                '''
+                for i, task in enumerate(tasks, 1):
+                    print(f"{i}. {task}")
+                '''
+                for i in hawl:
+                    print(hawl)
+                try:
+                    num = int(input("hawsha numberkeeda geli si loo saaro")) - 1
+                    if 0 <= num < len(hawl):
+                        removed = hawl.pop(num)
+                        print(f"Removed: {removed}")
+                    else:
+                        print("Invalid number!")
+                except ValueError:
+                    print("Please enter a number!")
+                    
+        elif choice == "4":
+            print("Goodbye!")
+            break
+            
+        else:
+            print("Please enter 1-4")
+
+# Start the to-do list
+todolist()
